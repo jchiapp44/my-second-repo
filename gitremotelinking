@@ -1,0 +1,35 @@
+LINKING REMOTE REPOSITORY TO LOCAL REPOSITORY:
+'git clone url' was hte first executed command
+
+julianchiapperino@Julians-MacBook-Air my-second-repo % git remote
+origin
+julianchiapperino@Julians-MacBook-Air my-second-repo % git remote rename origin my-second-repo
+Renaming remote references: 100% (1/1), done.
+julianchiapperino@Julians-MacBook-Air my-second-repo % git remote
+my-second-repo
+Before i could do the following commands, i had to push updates of repository to the remote repo:
+
+git push
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/jchiapp44/my-second-repo.git/'
+julianchiapperino@Julians-MacBook-Air my-second-repo % printf "protocol=https\nhost=github.com\n\n" | git credential-osxkeychain erase
+julianchiapperino@Julians-MacBook-Air my-second-repo % git push
+Username for 'https://github.com': jchiapp44
+Password for 'https://jchiapp44@github.com': 
+remote: Invalid username or token. Password authentication is not supported for Git operations.
+fatal: Authentication failed for 'https://github.com/jchiapp44/my-second-repo.git/'
+julianchiapperino@Julians-MacBook-Air my-second-repo % git push
+Username for 'https://github.com': jchiapp44
+Password for 'https://jchiapp44@github.com': 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 1.95 KiB | 1.95 MiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/jchiapp44/my-second-repo.git
+ * [new branch]      main -> main
+
+in order to accomplish this, i had to use the token from git hub as a security system to verify my git hub account, then i could git push the committed updates from the local repo to the remote repository.
+in case token credentials expire, you can create a new token or renew the date of expiration, youll just have to enter the erasing command of previous credentials to update with new credentials.
+
