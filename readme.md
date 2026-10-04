@@ -33,3 +33,5 @@ In summation, important git commands include:
 - 'git log' reveals commit history of repository, you can export this to a text via >> gitlog.txt
 - ***'git merge branchname'*** allows for taking of contents in one brnach of repo and inserting them, or copying them to another branch of repo as long as there is not a direct conflict with the different versions. for example if there were committed changes in both branches for one particular file, the merge will not be successful
 - ***'git merge --abort'*** used for particular conlficts, that are mentioned above, executed so that conflict resolves or that it no longer exists.
+
+I am adding this line from the remote repository, via git hub website, in order to figure out the 'git pull' command.
